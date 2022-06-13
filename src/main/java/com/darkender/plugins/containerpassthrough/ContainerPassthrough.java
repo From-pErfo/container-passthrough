@@ -1,7 +1,7 @@
 package com.darkender.plugins.containerpassthrough;
 
 import org.bukkit.Bukkit;
-import org.bukkit.FluidCollisionMode;
+//import org.bukkit.FluidCollisionMode;
 import org.bukkit.Material;
 import org.bukkit.block.*;
 import org.bukkit.entity.EntityType;
@@ -19,7 +19,7 @@ import org.bukkit.inventory.DoubleChestInventory;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.util.RayTraceResult;
+//import org.bukkit.util.RayTraceResult;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -64,11 +64,11 @@ public class ContainerPassthrough extends JavaPlugin implements Listener
     
     private boolean tryOpeningContainerRaytrace(Player player)
     {
-        RayTraceResult result = player.rayTraceBlocks(5.0, FluidCollisionMode.NEVER);
+        /*RayTraceResult result = player.rayTraceBlocks(5.0, FluidCollisionMode.NEVER);
         if(result == null || result.getHitBlock() == null || !(result.getHitBlock().getState() instanceof Container))
         {
             return false;
-        }
+        }*/
         Container container = (Container) result.getHitBlock().getState();
         
         if(canOpenContainer(player, result.getHitBlock(), result.getHitBlockFace()))
